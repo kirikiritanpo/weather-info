@@ -71,16 +71,16 @@ export default function Home(){
             <p className="city">{weather.name}</p>
 
             <div className="weather-container">
-              <img className="icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="天気アイコン" />
+              <img className="icon" src={`https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png`} alt="天気アイコン" />
               <p className="temp">{Math.round(weather.main.temp)}°</p>
             </div>
             
-            <p className="desc">{weather.weather[0].description}</p>
+            <p className="desc">{forecast.list[0].weather[0].description}</p>
           </div>
 
           <div className="sub">
-            <div>湿度{weather.main.humidity}%</div>
-            <div>風速{weather.wind.speed}m/s</div>
+            <div>湿度{forecast.list[0].main.humidity}%</div>
+            <div>風速{forecast.list[0].wind.speed}m/s</div>
           </div>
 
           {/* 週間予報 */}
